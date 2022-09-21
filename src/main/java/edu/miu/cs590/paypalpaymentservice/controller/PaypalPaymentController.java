@@ -12,7 +12,7 @@ import java.util.UUID;
 @RestController
 public class PaypalPaymentController {
 
-    @PostMapping("/processPayment")
+    @PostMapping("/process-payment")
     public ResponseEntity<String> makePayment(@RequestBody PaymentRequest paymentRequest){
         return new ResponseEntity<>("Payment successful with UID " + UUID.randomUUID().toString(), HttpStatus.OK);
     }

@@ -36,6 +36,12 @@ spec:
             timeoutSeconds: 2
             periodSeconds: 8
             failureThreshold: 1
+          env:
+            - name: PAYMENT_PAYPAL_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: app
+                  key: PAYMENT_PAYPAL_SECRET_KEY
 ---
 apiVersion: v1
 kind: Service
