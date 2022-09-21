@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class PaymentRequest {
-    private String userId;
+    private Long userId;
     private String paypalId;
     private Double balance;
 }
